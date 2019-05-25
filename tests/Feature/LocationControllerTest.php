@@ -37,7 +37,6 @@ class LocationControllerTest extends TestCase
     public function it_should_create_a_location()
     {
         $user = factory(User::class)->create();
-        $this->withoutExceptionHandling();
 
         $response = $this->json('POST', '/api/locations/', [
             'user_id' => $user->id,
