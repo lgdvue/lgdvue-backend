@@ -19,7 +19,8 @@
         "fzaninotto/faker": "^1.4",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "phpunit/phpunit": "^7.5"
+        "phpunit/phpunit": "^7.5",
+        "squizlabs/php_codesniffer": "^2.7"
     },
     "config": {
         "optimize-autoloader": true,
@@ -57,6 +58,12 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "lint": [
+            "./vendor/bin/phpcs -p --standard=PSR2 app",
+            "./vendor/bin/phpcs -p --standard=ruleset.xml tests"
+        ],
+        "docs": "cd docs && php -S localhost:8001",
+        "test": "vendor/bin/phpunit"
     }
 }

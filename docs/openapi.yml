@@ -1,0 +1,45 @@
+openapi: 3.0.1.
+
+info:
+  version: '1.0.0'
+  title: 'PinkFilm API'
+  x-logo:
+    url: './logo-pink-film.jpg'
+
+servers:
+  - url: 'https://server_ip'
+    description: 'Production Server'
+
+tags:
+  - name: 'situation'
+  - name: 'user'
+
+security:
+  - passwordAutentication: []
+
+paths:
+  /comments:
+    get:
+      tags:
+        - 'situation'
+      summary: 'Endpoint for retrieve platform situations'
+      parameters:
+        $ref: './parameters/situation-list.json'
+      responses:
+        200:
+          description: 'Get the situations that upload the users'
+          content:
+            application/json:
+              schema:
+                type: 'array'
+                items:
+                  $ref: './schemas/situation-list.json'
+
+components:
+  securitySchemes:
+    passwordAutentication:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: /oauth/token
+          scopes: {}

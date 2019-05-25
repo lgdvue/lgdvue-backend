@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "situationList": {
+      "type": "array",
+      "items": {
+        "$ref": "./situation.json"
+      }
+    }
+  },
+  "example": {
+    "situationList": [
+      {
+        "id": 1,
+        "type": "house"
+      }
+    ]
+  }
+}

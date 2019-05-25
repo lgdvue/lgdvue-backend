@@ -1,0 +1,20 @@
+[
+  {
+    "name": "type",
+    "in": "query",
+    "description": "Filter situations by type",
+    "example": "type=house",
+    "schema": {
+      "type": "string"
+    }
+  },
+  {
+    "name": "page",
+    "in": "query",
+    "description": "Show the page situations",
+    "example": "page=10",
+    "schema": {
+      "type": "integer"
+    }
+  }
+]
