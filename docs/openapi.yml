@@ -18,7 +18,7 @@ security:
   - passwordAutentication: []
 
 paths:
-  /comments:
+  /situations:
     get:
       tags:
         - 'situation'
@@ -34,6 +34,25 @@ paths:
                 type: 'array'
                 items:
                   $ref: './schemas/situation-list.json'
+  /oauth/token:
+    post:
+      tags:
+        - 'user'
+      summary: 'Endpoint for auth user'
+      requestBody:
+        description: 'Get bearer token from user/pass'
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/oauth-token.json'
+      responses:
+        200:
+          description: 'Get the token for auth'
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/token.json'
 
 components:
   securitySchemes:

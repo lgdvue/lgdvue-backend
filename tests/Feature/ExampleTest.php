@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\User;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ExampleTest extends TestCase
 {
@@ -14,8 +14,9 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $user = factory(User::class)->create();
+        $response = $this->actingAs($user, 'api')->get('/api/user');
 
-        $response->assertStatus(200);
+        $this->assertEquals($user->email, $response->json('email'));
     }
 }

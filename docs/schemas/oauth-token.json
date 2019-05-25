@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "grant_type": {
+      "type": "string"
+    },
+    "client_id": {
+      "type": "string"
+    },
+    "client_secret": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "grant_type": "password",
+    "client_id": "client-id",
+    "client_secret": "client-secret",
+    "username": "pinkfilm@example.com",
+    "password": "my-password",
+    "scope": ""
+  }
+}
