@@ -12,6 +12,7 @@ servers:
 
 tags:
   - name: 'location'
+  - name: 'reservation'
   - name: 'user'
 
 security:
@@ -52,6 +53,25 @@ paths:
             application/json:
               schema:
                 $ref: './schemas/token.json'
+  /reservations:
+    post:
+      tags:
+        - 'reservation'
+      summary: 'Endpoint for create a reservation'
+      requestBody:
+        description: 'Create a reservation'
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/reservation-create.json'
+      responses:
+        200:
+          description: 'Create a reservation request from a user'
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/reservation.json'
   /locations/{location}:
     get:
       tags:

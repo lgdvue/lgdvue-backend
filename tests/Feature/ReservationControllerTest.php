@@ -18,7 +18,6 @@ class ReservationControllerTest extends TestCase
         $user = factory(User::class)->create();
         $location = factory(Location::class)->create();
 
-        $this->withoutExceptionHandling();
         $response = $this->json('POST', '/api/reservations/', [
             'location_id' => $location->id,
             'user_id' => $user->id,
