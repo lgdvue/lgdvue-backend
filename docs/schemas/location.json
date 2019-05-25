@@ -4,12 +4,38 @@
     "id": {
       "type": "integer"
     },
+    "user_id": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
     "type": {
       "type": "string"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "created_at": {
+      "type": "datetime"
+    },
+    "updated_at": {
+      "type": "datetime"
     }
   },
   "example": {
     "id": 1,
-    "type": "house"
+    "user_id": 1,
+    "type": "house",
+    "longitude": 6.258916,
+    "latitude": -3.288474,
+    "created_at": "2019-05-25 10:00:00",
+    "updated_at": "2019-05-25 10:00:00"
   }
 }

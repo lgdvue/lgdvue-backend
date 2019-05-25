@@ -19,6 +19,20 @@ class LocationTest extends TestCase
     }
 
     /** @test */
+    public function it_has_a_title()
+    {
+        $location = factory(Location::class)->create();
+        $this->assertNotNull($location->title);
+    }
+
+    /** @test */
+    public function it_has_a_description()
+    {
+        $location = factory(Location::class)->create();
+        $this->assertNotNull($location->description);
+    }
+
+    /** @test */
     public function it_belongs_to_user()
     {
         $user = factory(User::class)->create();

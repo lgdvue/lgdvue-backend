@@ -19,6 +19,8 @@ $factory->define(Location::class, function (Faker $faker) {
             return factory(User::class)->create()->id;
         },
         'type' => 'house',
+        'title' => $faker->sentence,
+        'description' => $faker->sentence,
         'latitude' => $latitude,
         'longitude' => $longitude,
     ];
