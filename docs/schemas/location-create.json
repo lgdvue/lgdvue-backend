@@ -1,9 +1,6 @@
 {
   "type": "object",
   "properties": {
-    "id": {
-      "type": "integer"
-    },
     "user_id": {
       "type": "integer"
     },
@@ -24,15 +21,11 @@
     }
   },
   "example": {
-    "id": 1,
     "user_id": 1,
-    "username": "James",
     "title": "A location",
     "description": "A location description",
     "type": "house",
     "lng": 6.258916,
-    "lat": -3.288474,
-    "created_at": "2019-05-25 10:00:00",
-    "updated_at": "2019-05-25 10:00:00"
+    "lat": -3.288474
   }
 }

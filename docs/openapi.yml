@@ -34,6 +34,24 @@ paths:
                 type: 'array'
                 items:
                   $ref: './schemas/location-list.json'
+    post:
+      tags:
+        - 'location'
+      summary: 'Endpoint for create a location'
+      requestBody:
+        description: 'Create a location'
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './schemas/location-create.json'
+      responses:
+        200:
+          description: 'Get the token for auth'
+          content:
+            application/json:
+              schema:
+                $ref: './schemas/token.json'
   /locations/{location}:
     get:
       tags:
