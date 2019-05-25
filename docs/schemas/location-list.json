@@ -1,15 +1,15 @@
 {
   "type": "object",
   "properties": {
-    "situationList": {
+    "locationList": {
       "type": "array",
       "items": {
-        "$ref": "./situation.json"
+        "$ref": "./location.json"
       }
     }
   },
   "example": {
-    "situationList": [
+    "locationList": [
       {
         "id": 1,
         "type": "house"

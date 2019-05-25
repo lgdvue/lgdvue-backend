@@ -4,15 +4,14 @@ namespace Tests\Feature;
 
 use App\User;
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ExampleTest extends TestCase
+class ApiUserTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
+    use RefreshDatabase;
+
+    /** @test */
+    public function get_api_user_retrieve_current_user()
     {
         $user = factory(User::class)->create();
         $response = $this->actingAs($user, 'api')->get('/api/user');

@@ -2,7 +2,7 @@
   {
     "name": "type",
     "in": "query",
-    "description": "Filter situations by type",
+    "description": "Filter locations by type",
     "example": "type=house",
     "schema": {
       "type": "string"
@@ -11,7 +11,7 @@
   {
     "name": "page",
     "in": "query",
-    "description": "Show the page situations",
+    "description": "Show the page locations",
     "example": "page=10",
     "schema": {
       "type": "integer"

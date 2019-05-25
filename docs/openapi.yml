@@ -11,29 +11,29 @@ servers:
     description: 'Production Server'
 
 tags:
-  - name: 'situation'
+  - name: 'location'
   - name: 'user'
 
 security:
   - passwordAutentication: []
 
 paths:
-  /situations:
+  /locations:
     get:
       tags:
-        - 'situation'
-      summary: 'Endpoint for retrieve platform situations'
+        - 'location'
+      summary: 'Endpoint for retrieve platform locations'
       parameters:
-        $ref: './parameters/situation-list.json'
+        $ref: './parameters/location-list.json'
       responses:
         200:
-          description: 'Get the situations that upload the users'
+          description: 'Get the locations that upload the users'
           content:
             application/json:
               schema:
                 type: 'array'
                 items:
-                  $ref: './schemas/situation-list.json'
+                  $ref: './schemas/location-list.json'
   /oauth/token:
     post:
       tags:
