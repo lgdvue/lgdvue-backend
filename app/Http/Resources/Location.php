@@ -16,12 +16,13 @@ class Location extends JsonResource
     {
         return [
             'id' => $this->id,
-            'user_id' => $this->user_id,
+            'user_id' => $this->user->id,
+            'username' => $this->user->name,
             'type' => $this->type,
             'title' => $this->title,
             'description' => $this->description,
-            'longitude' => $this->longitude,
-            'latitude' => $this->latitude,
+            'lng' => $this->longitude,
+            'lat' => $this->latitude,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

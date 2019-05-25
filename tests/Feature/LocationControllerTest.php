@@ -18,6 +18,6 @@ class LocationControllerTest extends TestCase
 
         $response = $this->json('GET', '/api/locations');
 
-        $this->assertCount(2, $response->json('locationList'));
+        $this->assertCount(2, $response->json());
     }
 }
