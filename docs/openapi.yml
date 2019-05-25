@@ -4,7 +4,7 @@ info:
   version: '1.0.0'
   title: 'PinkFilm API'
   x-logo:
-    url: './logo-pink-film.jpg'
+    url: './logo-pink-film.svg'
 
 servers:
   - url: 'https://server_ip'
