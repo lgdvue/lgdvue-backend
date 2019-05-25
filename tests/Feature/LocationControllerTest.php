@@ -20,4 +20,14 @@ class LocationControllerTest extends TestCase
 
         $this->assertCount(2, $response->json());
     }
+
+    /** @test */
+    public function it_should_retrieve_a_location()
+    {
+        $location = factory(Location::class)->create();
+
+        $response = $this->json('GET', '/api/locations/'. $location->id);
+
+        $this->assertEquals($location->id, $response->json('id'));
+    }
 }
