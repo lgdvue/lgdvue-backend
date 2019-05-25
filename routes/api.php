@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\ReservationController;
 use Illuminate\Http\Request;
 
 /*
@@ -21,3 +22,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/locations', [LocationController::class, 'index']);
 Route::get('/locations/{location}', [LocationController::class, 'show']);
 Route::post('/locations', [LocationController::class, 'store']);
+Route::post('/reservations', [ReservationController::class, 'store']);

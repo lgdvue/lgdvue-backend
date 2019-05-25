@@ -25,7 +25,7 @@ class LocationController extends Controller
         $location = Location::create([
             'latitude' => $request->lat,
             'longitude' => $request->lng,
-            'user_id' => User::first()->id,
+            'user_id' => $request->user_id ?? User::first()->id,
             'type' => $request->type,
             'title' => $request->title,
             'description' => $request->description,

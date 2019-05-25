@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends Model
+class Reservation extends Model
 {
     protected $guarded = [];
 
@@ -13,8 +13,8 @@ class Location extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function reservations()
+    public function location()
     {
-        return $this->hasMany(Reservation::class);
+        return $this->belongsTo(Location::class);
     }
 }
