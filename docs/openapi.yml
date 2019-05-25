@@ -34,6 +34,19 @@ paths:
                 type: 'array'
                 items:
                   $ref: './schemas/location-list.json'
+  /locations/{location}:
+    get:
+      tags:
+        - 'location'
+      summary: 'Endpoint for retrieve a location'
+      responses:
+        200:
+          description: 'Get a location'
+          content:
+            application/json:
+              schema:
+                type: 'object'
+                $ref: './schemas/location.json'
   /oauth/token:
     post:
       tags:
